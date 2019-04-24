@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ReverseLinkedList
 {
@@ -11,14 +8,12 @@ namespace ReverseLinkedList
     {
         static void Main(string[] args)
         {
-            Node now;
-            Node soon;
             List<Node> list = new List<Node>();
-            now = new Node(1, null);
+            var now = new Node(1, null);
             list.Add(now);
             for (int i = 2; i < 6; i++)
             {
-                soon = new Node(i, null);
+                var soon = new Node(i, null);
                 now.Next = soon;
                 now = soon;
                 list.Add(now);
@@ -40,7 +35,6 @@ namespace ReverseLinkedList
 
             Console.WriteLine("Traverse the list from the new head --");
             current = newHead;
-            Node next = newHead.Next;
             do
             {
                 Console.WriteLine($"current: {current.Val}");
