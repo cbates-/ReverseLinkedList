@@ -46,7 +46,7 @@ namespace ReverseLinkedList
 
         }
 
-        private static Node ReverseIt(Node startNode)
+        public static Node ReverseIt(Node startNode)
         {
             Node newHead = startNode;
             if (newHead == null) { return newHead; }
@@ -77,7 +77,7 @@ namespace ReverseLinkedList
         }
     }
 
-    class Node
+    public class Node
     {
         public Node(int val, Node next)
         {
