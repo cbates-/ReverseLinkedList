@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using NUnit.Framework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ReverseLinkedList;
 
-namespace ReverseLinkedList
+namespace UnitTests
 {
+    [TestClass]
     public class Tests
     {
         //[TestInitialize]
@@ -12,13 +13,13 @@ namespace ReverseLinkedList
         //{ }
 
 
-        [Test]
+        [TestMethod]
         public void TestEmptyList()
         {
             Assert.IsTrue(true);
         }
 
-        [Test]
+        [TestMethod]
         public void TestTwoValList()
         {
             var list = PopulateListFromValues(new List<int>() { 1, 2 });
@@ -29,7 +30,7 @@ namespace ReverseLinkedList
             Assert.IsTrue(passed);
         }
 
-        [Test]
+        [TestMethod]
         public void TestNonConsecutiveValuesList()
         {
             var list = PopulateListFromValues(new List<int>() { 1, 3, 99, 101 });
